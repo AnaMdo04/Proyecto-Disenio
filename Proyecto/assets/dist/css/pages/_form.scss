@@ -1,0 +1,41 @@
+.form-group {
+  margin-bottom: 20px;
+  text-align: center;
+  label[for="username"] {
+    margin-bottom: 10px;
+  }
+  label[for="password"] {
+    margin-bottom: 10px;
+  }
+  label[for="nombre"] {
+    margin-bottom: 10px;
+  }
+  label[for="email"] {
+    margin-bottom: 10px;
+  }
+  label[for="apellido"] {
+    margin-bottom: 10px;
+  }
+  label[for="confirmarPassword"] {
+    margin-bottom: 10px;
+  }
+  label[for="edad"] {
+    margin-bottom: 10px;
+  }
+  label[for="comentarios"] {
+    margin-bottom: 10px;
+  }
+  label[for="sintomas"] {
+    margin-bottom: 10px;
+  }
+}
+.form-control {
+  background-color: $background-color_7;
+}
+.fc-day-number {
+  display: inline-block;
+}
+.fc-day-name {
+  display: inline-block;
+  margin-left: 3px;
+}

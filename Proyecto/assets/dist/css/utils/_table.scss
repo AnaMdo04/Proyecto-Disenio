@@ -1,0 +1,36 @@
+.table-condensed {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-height: 100%;
+  margin-bottom: 40px;
+  thead {
+    th {
+      padding: 8px;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  tbody {
+    td {
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+}
+.table-bordered {
+  border: 1px solid #ddd;
+}
+.table-striped {
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: $background-color_10;
+      }
+    }
+  }
+}

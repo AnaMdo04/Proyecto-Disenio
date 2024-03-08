@@ -1,0 +1,42 @@
+.bar {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: $color_1;
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  &:hover {
+    color: $color_5;
+  }
+  &:focus {
+    color: $color_5;
+  }
+}
+.nav-scroller {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.nav-item {
+  margin: 0 10px;
+}
+.logo {
+  max-width: 200px;
+  height: auto;
+  &:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+  }
+}
+.custom-sign-up-btn {
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+.small-black {
+  color: $color_1 !important;
+}

@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ConnectSalud - Tu portal de Telemedicina" />
+    <meta name="author" content="ConnectSalud" />
+    <meta name="generator" content="Hugo 0.118.2" />
+    <title>ConnectSalud</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/" />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        />
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        />
+      </symbol>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol
+        id="aperture"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path
+          d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"
+        />
+      </symbol>
+      <symbol id="cart" viewBox="0 0 16 16">
+        <path
+          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+        />
+      </symbol>
+      <symbol id="chevron-right" viewBox="0 0 16 16">
+        <path
+          fill-rule="evenodd"
+          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+        />
+      </symbol>
+    </svg>
+      
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    </head>
+    <body>
+      <div class="container">
+        <nav class="home__nav-1" id="home__nav-1">
+          <div class="image-container">
+            <img src="../assets/img/menu_hamburguesa.png" alt="Imagen Desplegable" class="clickable-image" id="myImage">
+            <div class="custom-menu mb-3 rounded" id="myContainer" style="display: none;">
+              <ul>
+                <a class="nav-item bar" href="especialista.html">Especialista</a>
+                <a class="nav-item bar" href="sobreNosotros.html">Sobre Nosotros</a>
+                <a class="nav-item bar" href="faqs.html">FAQs</a>
+              </ul>
+            </div>
+          </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var image = document.getElementById('myImage');
+              var container = document.getElementById('myContainer');
+          
+              image.addEventListener('click', function () {
+                if (container.style.display === 'block' || container.style.display === '') {
+                  container.style.display = 'none';
+                } else {
+                  container.style.display = 'block';
+                }
+              });
+            });
+          </script>
+        </nav>
+    
+      <!-- Encabezado -->
+    <header class="lh-1 py-3">
+      <div class="row align-items-center">
+        <!-- Logo -->
+        <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+          <a class="link-secondary" href="paginaPrincipal.html">
+            <img class="logo" src="../assets/img/logo.png" alt="Logotipo de la página">
+          </a>
+        </div>
+
+        <!-- ConnectSalud -->
+        <div class="col-md-4 col-12 text-center">
+          <a class="blog-header-logo text-decoration-none" href="paginaPrincipal.html">CONNECTSALUD</a>
+        </div>
+
+        <!-- Área Personal -->
+        <div class="col-md-4 col-12 text-right">
+        
+          <section class="search">
+            <button type="button" class="btn-search m-1 btn btn-sm btn-outline-secondary" onclick="window.location.href='inicioSesion.html'">Iniciar Sesión</button>
+            <button type="button" class="btn-search m-1 btn btn-sm btn-outline-secondary" onclick="window.location.href='registro.html'">Registrar</button>
+          </section>
+          
+      
+      </div>
+        </div>
+
+            <!-- Icono del menú hamburguesa -->
+            <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+              <i class="nav__menu-icon fa-solid fa-bars"></i>
+            </div>
+    
+            <!-- Botones de Idiomas -->
+            <div class="col-md-4 offset-md-8 col-12 text-right mt-3">
+              <section class="button-container-1">
+                <button class="button-1 active" onclick="changeColor(this)">Español</button>
+                <button class="button-1" onclick="changeColor(this)">Francés</button>
+                <button class="button-1" onclick="changeColor(this)">Inglés</button>
+                <script>
+                  function changeColor(button) {
+                    var buttons = document.querySelectorAll('.button-1');
+                    buttons.forEach(function (btn) {
+                      btn.classList.remove('active');
+                    });
+                    button.classList.add('active');
+                  }
+                </script>
+              </section>
+            </div>
+          </div>
+        </header>
+    
+        <nav class="home__nav" id="home__nav">
+          <div class="custom-menu nav-scroller py-1 mb-3 rounded">
+            <a class="nav-item bar" href="especialista.html">Especialista</a>
+            <a class="nav-item bar" href="sobreNosotros.html">Sobre Nosotros</a>
+            <a class="nav-item bar" href="faqs.html">FAQs</a>
+          </div>
+        </nav>
+      </div>
+
+    <main class="container mx-auto text-center">
+      <div class="p-4 p-md-5 mb-4 rounded">
+        <h1 class="display-4 fst-italic">Sobre Nosotros</h1>
+        <p class="lead my-3">
+          Bienvenido a ConnectSalud, tu portal de telemedicina que se preocupa por tu bienestar. Nuestra misión es
+          proporcionar acceso fácil y conveniente a servicios de salud de calidad desde la comodidad de tu hogar.
+        </p>
+        <p class="lead my-3">
+          En ConnectSalud, nos esforzamos por mejorar la forma en que accedes a la atención médica. Nuestro equipo de
+          profesionales de la salud está comprometido a brindarte servicios confiables y seguros.
+        </p>
+        <p class="lead my-3">
+          Conéctate a tu bienestar, donde y cuando quieras. Explora nuestros servicios y descubre una nueva forma de
+          cuidar de tu salud.
+        </p>
+        <div>
+          <h1 class="display-4 fst-italic">Nuestros servicios</h1>
+          <audio id="myAudio" src="../assets/img/servicios.mp3"></audio>
+          <i id="start" class="fa-solid fa-play" onclick="playAudio()" alt="Play"></i>
+          <i id="stop" class="fa-solid fa-stop" onclick="stopAudio()" alt="Stop"></i>
+          <i id="volumeDown" class="fa-solid fa-volume-low" onclick="volumeDown()" alt="Bajar Volumen"></i>
+          <i id="volumeUp" class="fa-solid fa-volume-high" onclick="volumeUp()" alt="Subir Volumen"></i>
+        </div>
+        
+      <script>
+        var audio = document.getElementById('myAudio');
+      
+        function playAudio() {
+          audio.play();
+        }
+      
+        function stopAudio() {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      
+        function volumeUp() {
+          if(audio.volume < 1) audio.volume += 0.1;
+        }
+      
+        function volumeDown() {
+          if(audio.volume > 0) audio.volume -= 0.1;
+        }
+      </script>
+      </div>
+
+      <div class="row opiniones-1">
+        <div class="testimonial-container p-4">
+          <img src="../assets/img/usser.svg" alt="Foto Cliente 1" />
+          <p>
+            "La experiencia con ConnectSalud ha sido increíble. El servicio al cliente es excepcional y el producto
+            superó mis expectativas."
+          </p>
+          <p class="client-name">- Ana Montes de Ory</p>
+        </div>
+
+        <div class="testimonial-container p-4">
+          <img src="../assets/img/usser.svg" alt="Foto Cliente 2" />
+          <p>
+            "No solo obtuve un producto de alta calidad, sino que también recibí asesoramiento experto. ¡Altamente
+            recomendado!"
+          </p>
+          <p class="client-name">- Marcos Rodriguez</p>
+        </div>
+
+        <div class="testimonial-container p-4">
+          <img src="../assets/img/usser.svg" alt="Foto Cliente 3" />
+          <p>
+            "¡Increíble servicio! La plataforma de ConnectSalud facilitó enormemente la gestión de mi salud. ¡Gracias!"
+          </p>
+          <p class="client-name">- Laura Gómez</p>
+        </div>
+
+        <div class="testimonial-container p-4">
+          <img src="../assets/img/usser.svg" alt="Foto Cliente 4" />
+          <p>
+            "Desde que descubrí ConnectSalud, mi vida ha mejorado. Acceder a servicios médicos nunca fue tan sencillo y
+            rápido."
+          </p>
+          <p class="client-name">- Javier Martínez</p>
+        </div>
+
+        <div class="testimonial-container p-4">
+          <img src="../assets/img/usser.svg" alt="Foto Cliente 5" />
+          <p>
+            "Como usuario habitual, puedo decir que la atención al cliente de ConnectSalud marca la diferencia.
+            ¡Excelente!"
+          </p>
+          <p class="client-name">- Carla Fernández</p>
+        </div>
+        <div class="testimonial-container p-4">
+          <img src="../assets/img/usser.svg" alt="Foto Cliente 6" />
+          <p>
+            "Estoy realmente impresionado con la calidad de los servicios de ConnectSalud. La telemedicina nunca fue tan
+            accesible."
+          </p>
+          <p class="client-name">- Juan López</p>
+        </div>
+<style>
+  .card {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  height: 380px;
+  max-height: 330px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  border-color: black;
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+          -4px -4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+          -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 64%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background-color: rgb(165, 165, 165);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-icon {
+  font-size: 40px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 17px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: black;
+  cursor: default;
+}
+
+.card-des {
+  margin: 0;
+  font-size: 13px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  cursor: default;
+}
+
+.card-btn {
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #84cec0;
+  width: 25px;
+  height: 25px;
+  max-height: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  gap: 1px;
+  box-sizing: border-box;
+  padding-left: 5px;
+  margin-top: 8px;
+}
+
+.card-btn:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  border-radius: 8px;
+  height: 30px;
+  gap: 10px;
+  padding: 0;
+}
+
+.card-btn-text {
+  opacity: 0;
+  font-size: 1px;
+  font-weight: 500;
+  transition: all ease-in-out 0.5s;
+}
+
+.card-btn:hover > .card-btn-text {
+  opacity: 1;
+  font-size: 15px;
+}
+</style>
+
+<script>
+  function playVideo(videoId) {
+  var video = document.getElementById(videoId);
+  var playIcon = document.getElementById('playIcon' + videoId.replace('videoID', ''));
+  if (video.style.display === "none") {
+    video.style.display = "block";
+    video.play();
+    playIcon.style.display = "none";
+  } else {
+    video.pause();
+    video.style.display = "none";
+    playIcon.style.display = "block";
+  }
+}
+
+</script>
+
+<div class="card">
+  <div class="card-image-container">
+    <video id="videoID1" width="100%" height="100%" style="display:none;">
+      <source src="../assets/img/opinion1.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" fill="currentColor" class="video-icon" style="display:block;" id="playIcon1">
+      <path d="M464 384.39a32 32 0 01-13-2.77 15.77 15.77 0 01-2.71-1.54l-82.71-58.22A32 32 0 01352 295.7v-79.4a32 32 0 0113.58-26.16l82.71-58.22a15.77 15.77 0 012.71-1.54 32 32 0 0145 29.24v192.76a32 32 0 01-32 32zM268 400H84a68.07 68.07 0 01-68-68V180a68.07 68.07 0 0168-68h184.48A67.6 67.6 0 01336 179.52V332a68.07 68.07 0 01-68 68z"></path>
+    </svg>
+  </div>
+          <p class="card-title">Ana Montes de Ory</p>
+          <p class="card-des">
+            Gracias a ConectSalud he podido llevar la rehabilitación de mi lesión desde la comodidad de mi casa.
+          </p>
+          <div class="card-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
+              <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
+            </svg>
+            <span onclick="playVideo('videoID1')" class="card-btn-text">Ver video</span>
+          </div>
+        </div>
+
+
+        
+<div class="card">
+  <div class="card-image-container">
+    <video id="videoID2" width="100%" height="100%" style="display:none;">
+      <source src="../assets/img/opinion2.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" fill="currentColor" class="video-icon" style="display:block;" id="playIcon1">
+      <path d="M464 384.39a32 32 0 01-13-2.77 15.77 15.77 0 01-2.71-1.54l-82.71-58.22A32 32 0 01352 295.7v-79.4a32 32 0 0113.58-26.16l82.71-58.22a15.77 15.77 0 012.71-1.54 32 32 0 0145 29.24v192.76a32 32 0 01-32 32zM268 400H84a68.07 68.07 0 01-68-68V180a68.07 68.07 0 0168-68h184.48A67.6 67.6 0 01336 179.52V332a68.07 68.07 0 01-68 68z"></path>
+    </svg>
+  </div>
+          <p class="card-title">Laura Gómez</p>
+          <p class="card-des">
+            Necesitaba urgentemente a un médico de cabecera y gracias a ConectSalud he podido tenerlo al alcance de mi mano.
+          </p>
+          <div class="card-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
+              <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
+            </svg>
+            <span onclick="playVideo('videoID2')" class="card-btn-text">Ver video</span>
+          </div>
+        </div>
+
+        
+<div class="card">
+  <div class="card-image-container">
+    <video id="videoID3" width="100%" height="100%" style="display:none;">
+      <source src="../assets/img/opinion3.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" fill="currentColor" class="video-icon" style="display:block;" id="playIcon1">
+      <path d="M464 384.39a32 32 0 01-13-2.77 15.77 15.77 0 01-2.71-1.54l-82.71-58.22A32 32 0 01352 295.7v-79.4a32 32 0 0113.58-26.16l82.71-58.22a15.77 15.77 0 012.71-1.54 32 32 0 0145 29.24v192.76a32 32 0 01-32 32zM268 400H84a68.07 68.07 0 01-68-68V180a68.07 68.07 0 0168-68h184.48A67.6 67.6 0 01336 179.52V332a68.07 68.07 0 01-68 68z"></path>
+    </svg>
+  </div>
+          <p class="card-title">Carla Fernández</p>
+          <p class="card-des">
+            En ConnectSalud han atendido mis necesidades rápida y efectivamente.
+          </p>
+          <div class="card-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
+              <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
+            </svg>
+            <span onclick="playVideo('videoID3')" class="card-btn-text">Ver video</span>
+          </div>
+        </div>
+
+
+      </div>
+    </main>
+
+    <footer class="py-5 text-center bg-custom-color">
+      <div class="container-footer">
+          <!-- Columna para información de contacto e imágenes de redes sociales -->
+          <div class="col-md-5 mb-4">
+              <ul class="container-legal">
+                  <li class="container-legal"><a class="option_link" href="#">Terminos legales 1</a></li>
+                  <li class="ccontainer-legal"><a class="option_link" href="#">Terminos legales 2</a></li>
+                  <li class="container-legal"><a class="option_link" href="#">Terminos legales 3</a></li>
+                  <li class="container-legal"><a class="option_link" href="#">Terminos legales 4</a></li>
+              </ul>
+          </div>
+            <!-- Imágenes de redes sociales -->
+            <div class="social-icons">
+              <a href="https://www.facebook.com/" target="_blank" title="Facebook"><img src="../assets/img/facebook-icon.png" alt="Facebook" style="width: 55px; height: 55px;"></a>
+              <a href="https://twitter.com/" target="_blank" title="Twitter"><img src="../assets/img/twitter-icon.png" alt="Twitter" style="width: 60px; height: 60px; margin-top: 20px;"></a>
+              <a href="https://www.instagram.com/" target="_blank" title="Instagram"><img src="../assets/img/instagram-icon.png" alt="Instagram" style="width: 95px; height: 95px;"></a>
+         
+    <div>
+            <!-- Información de contacto -->
+            <p class="mb-7">Contáctanos: <a href="mailto:amonory327@g.educaand.es">amonory327@g.educaand.es</a></p>
+            <p class="mb-14">Teléfono: +34601067818</p>
+          </div>
+    </div>
+          <!-- Columna para enlaces adicionales -->
+          <div class="col-md-5">
+            <ul class="list--unstyled">
+              <p class="links">Enlaces Útiles</p>
+              <li><a href="sobreNosotros.html">Acerca de Nosotros</a></li>
+              <li><a href="faqs.html">Preguntas Frecuentes</a></li>
+            </ul>
+          </div>
+      </div>
+    </footer>
+      
+  
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+  </html>

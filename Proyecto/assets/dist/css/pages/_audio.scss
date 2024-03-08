@@ -1,0 +1,56 @@
+#start {
+  padding: 12px 20px;
+  background-color: $background-color_2;
+  color: $color_2;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $background-color_3;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
+#stop {
+  padding: 12px 20px;
+  background-color: $background-color_2;
+  color: $color_2;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $background-color_3;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
+#volumeUp {
+  padding: 12px 20px;
+  background-color: $background-color_2;
+  color: $color_2;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $background-color_3;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
+#volumeDown {
+  padding: 12px 20px;
+  background-color: $background-color_2;
+  color: $color_2;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $background-color_3;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}

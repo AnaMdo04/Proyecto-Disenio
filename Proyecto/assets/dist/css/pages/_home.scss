@@ -1,0 +1,42 @@
+.custom-news {
+  margin-bottom: 400px;
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
+.custom-menu {
+  background-color: $background-color_2;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.home__nav-1 {
+  display: none;
+}
+.banner {
+  background-color: $background-color_1;
+}
+.offers {
+  background-color: $background-color_1;
+}
+.custom-news-1 {
+  margin-bottom: 200px;
+  margin-top: 10px;
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: $color_4;
+}
